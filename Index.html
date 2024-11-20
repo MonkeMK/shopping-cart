@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Pixel Art Generator</h1>
+  
+  <div class="controls">
+    <label for="raster">Raster (aantal rijen/kolommen):</label>
+    <input type="number" id="raster" min="1" max="23" value="10">
+    
+    <label for="grootte">Grootte:</label>
+    <input type="number" id="grootte" min="1" value="5">
+    
+    <button id="genereer">Genereer</button>
+    <p id="error-message" style="color: red; display: none;">Raster mag niet groter zijn dan 23 bij 23.</p>
+  </div>
+  
+  <div class="color-picker">
+    <label>Kies kleur:</label>
+    <div id="color-block" style="width: 30px; height: 30px; background-color: #000000; border: 1px solid #000;"></div>
+    <input type="color" id="colorPicker" value="#000000" style="display: none;">
+  </div>
+  
+  <div class="grid-container">
+    <table id="grid"></table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
